@@ -21,6 +21,7 @@ RUN apt-get update \
     && apt-get autoremove
 
 ADD composer /usr/local/bin/composer
+RUN chmod a+x /usr/local/bin/composer
 ADD swoole.tar.gz /home/
 ADD hiredis.tar.gz /home/
 RUN composer self-update --clean-backups
@@ -47,3 +48,4 @@ RUN ( \
     ) \
     && rm -r /home/swoole-src-2.1.1 \
     && docker-php-ext-enable swoole
+ADD php.ini /usr/local/etc/php/

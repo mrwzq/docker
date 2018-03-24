@@ -7,7 +7,7 @@ volumes:
 
 services:
     nginx:
-        container_name: nginx-local
+        container_name: it-nginx-local
         image: daocloud.io/library/nginx:latest
         ports:
             - 80:80
@@ -17,21 +17,31 @@ services:
         volumes_from:
             - php
     php:
-        container_name: php-local
+        container_name: it-php-local
         build: ./docker/php/7.0
         expose:
             - 9000
         volumes:
-            - /e/WechatCRM/:/var/www/WechatCRM/
+            - /Users/wangzq/project/ITWechat:/var/www/WechatCRM/
 
     mysql:
+        container_name: it-mysql-local
         image: mysql:latest
+        ports:
+            - 33061:3306
         expose:
             - 3306
         volumes:
             - database_data:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: wangziqi
-            MYSQL_DATABASE: it
+            MYSQL_DATABASE: itwechat
             MYSQL_USER: root
             MYSQL_PASSWORD: wangziqi
+    redis:
+        container_name: it-redis-local
+        build: ./docker/redis
+        ports:
+            - 63791:6379
+        expose:
+            - 6379
