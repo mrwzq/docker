@@ -1,0 +1,44 @@
+2018/03/27 09:02:56 [error] 5#5: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidConfigException: Unknown component ID: request in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/di/ServiceLocator.php:139
+Stack trace:
+#0 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('request', true)
+#1 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Application.php(160): yii\base\Module->get('request')
+#2 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Component.php(139): yii\web\Application->getRequest()
+#3 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/di/ServiceLocator.php(77): yii\base\Component->__get('request')
+#4 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/ErrorHandler.php(499): yii\di\ServiceLocator->__get('request')
+#5 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/ErrorHandler.php(115): yii\web\ErrorHandler->shouldRenderSimpleHtml()
+#6 /var/www/html/WechatCRM/it-middleware/v" while reading upstream, client: 172.21.0.1, server: it-mw-local.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-mw-local.com"
+2018/03/27 09:03:04 [error] 5#5: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidConfigException: Unknown component ID: request in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/di/ServiceLocator.php:139
+Stack trace:
+#0 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('request', true)
+#1 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Application.php(160): yii\base\Module->get('request')
+#2 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Component.php(139): yii\web\Application->getRequest()
+#3 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/di/ServiceLocator.php(77): yii\base\Component->__get('request')
+#4 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/ErrorHandler.php(499): yii\di\ServiceLocator->__get('request')
+#5 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/ErrorHandler.php(115): yii\web\ErrorHandler->shouldRenderSimpleHtml()
+#6 /var/www/html/WechatCRM/it-middleware/v" while reading upstream, client: 172.21.0.1, server: it-mw-local.com, request: "GET /site/error HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-mw-local.com"
+2018/03/27 09:12:47 [error] 6#6: *22 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request: site/error in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#4 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request: site/ in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/y" while reading upstream, client: 172.21.0.1, server: it-wechat-local.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-wechat-local.com"
+2018/03/27 09:12:48 [error] 6#6: *22 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request: site/error in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#4 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request: site/ in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/y" while reading upstream, client: 172.21.0.1, server: it-wechat-local.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-wechat-local.com"
