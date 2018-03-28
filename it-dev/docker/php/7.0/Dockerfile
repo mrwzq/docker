@@ -54,15 +54,21 @@ RUN ( \
 
 # 安装freetds
 ADD freetds.tar.gz /home/
-RUN cd /home/freetds-0.91.81 && ./configure --prefix=/usr/local/freetds --enable-msdblib --enable-sybase-compat   --disable-threadsafe && make && make install
+RUN cd /home/freetds-0.91.81 && ./configure --prefix=/usr/local/freetds --enable-msdblib --enable-sybase-compat --disable-threadsafe && make && make install
 RUN rm -r /home/freetds-0.91.81
 # 设置freetds默认配置文件
 ADD freetds.conf /usr/local/freetds/etc/freetds.conf
 
 # 安装dblib扩展
-ADD pdo_dblib /home/pdo_dblib
-RUN cd /home/pdo_dblib && phpize && ./configure --with-pdo-dblib=/usr/local/freetds && make && make install && rm -r /home/pdo_dblib
-RUN docker-php-ext-enable pdo_dblib
+RUN docker-php-ext-configure pdo_dblib --with-pdo-dblib=/usr/local/freetds
+RUN docker-php-ext-install pdo_dblib
+
+# 安装pdo_mysql扩展
+RUN docker-php-ext-install pdo_mysql
+
+RUN apt-get install -y imagemagick libmagick++-dev
+
+RUN pecl install imagick && docker-php-ext-enable imagick && pecl clear-cache
 
 # 设置php默认配置
 ADD php.ini /usr/local/etc/php/

@@ -42,3 +42,74 @@ Previous exception:
 yii\base\InvalidRouteException: Unable to resolve the request: site/ in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
 Stack trace:
 #0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/y" while reading upstream, client: 172.21.0.1, server: it-wechat-local.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-wechat-local.com"
+2018/03/28 03:09:30 [error] 5#5: *5 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-middleware/api/controllers/SiteController.php on line 25. in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#4 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request: user/find in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/Wec" while reading upstream, client: 172.21.0.1, server: it-mw-local.com, request: "GET /user/find?phone=18820035407&type=1&token=1 HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-mw-local.com"
+2018/03/28 03:10:07 [error] 5#5: *5 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-middleware/api/controllers/SiteController.php on line 25. in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#4 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request: user/find in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/Wec" while reading upstream, client: 172.21.0.1, server: it-mw-local.com, request: "GET /user/find?phone=18820035407&type=BIT&token=1 HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-mw-local.com"
+2018/03/28 03:10:24 [error] 5#5: *5 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-middleware/api/controllers/SiteController.php on line 25. in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#4 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request: user/find in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/Wec" while reading upstream, client: 172.21.0.1, server: it-mw-local.com, request: "GET /user/find?phone=18820035407&type=BIT&token=1 HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-mw-local.com"
+2018/03/28 03:11:38 [error] 5#5: *5 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.21.0.1, server: it-mw-local.com, request: "GET /user/phone?phone=18820035407&type=BIT&token=1 HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-mw-local.com"
+2018/03/28 03:13:54 [error] 5#5: *14 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.21.0.1, server: it-mw-local.com, request: "GET /user/phone?phone=18820035407&type=BIT&token=1 HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-mw-local.com"
+2018/03/28 03:53:50 [error] 6#6: *26 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request: site/error in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(Picqer\Barcode\Exceptions\BarcodeException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(Picqer\Barcode\Exceptions\BarcodeException))
+#4 {main}
+Previous exception:
+Picqer\Barcode\Exceptions\BarcodeException: Neither gd-lib or imagick are installed! in /var/www/html/WechatCRM/it-application/vendor/picqer/php-barcode-generator/src/BarcodeGeneratorPNG.php:44
+Stack" while reading upstream, client: 172.21.0.1, server: it-wechat-local.com, request: "GET /index/index?brand_id=1 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-wechat-local.com"
+2018/03/28 03:53:53 [error] 6#6: *26 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request: site/error in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(Picqer\Barcode\Exceptions\BarcodeException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(Picqer\Barcode\Exceptions\BarcodeException))
+#4 {main}
+Previous exception:
+Picqer\Barcode\Exceptions\BarcodeException: Neither gd-lib or imagick are installed! in /var/www/html/WechatCRM/it-application/vendor/picqer/php-barcode-generator/src/BarcodeGeneratorPNG.php:44
+Stack" while reading upstream, client: 172.21.0.1, server: it-wechat-local.com, request: "GET /index/index?brand_id=1 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-wechat-local.com"
+2018/03/28 03:54:09 [error] 6#6: *26 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request: site/error in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(Picqer\Barcode\Exceptions\BarcodeException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(Picqer\Barcode\Exceptions\BarcodeException))
+#4 {main}
+Previous exception:
+Picqer\Barcode\Exceptions\BarcodeException: Neither gd-lib or imagick are installed! in /var/www/html/WechatCRM/it-application/vendor/picqer/php-barcode-generator/src/BarcodeGeneratorPNG.php:44
+Stack" while reading upstream, client: 172.21.0.1, server: it-wechat-local.com, request: "GET /index/index?brand_id=1 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-wechat-local.com"
