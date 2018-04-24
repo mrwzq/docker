@@ -1,24 +1,52 @@
-2018/03/27 09:02:56 [error] 5#5: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
-yii\base\InvalidConfigException: Unknown component ID: request in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/di/ServiceLocator.php:139
+2018/03/30 09:11:44 [error] 5#5: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://221.179.46.194:9000", host: "localhost"
+2018/03/30 09:11:44 [error] 5#5: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://221.179.46.194:9000", host: "localhost"
+2018/03/30 09:11:45 [error] 5#5: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://221.179.46.194:9000", host: "localhost"
+2018/03/30 09:11:45 [error] 5#5: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://221.179.46.194:9000", host: "localhost"
+2018/03/30 09:11:45 [error] 5#5: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://221.179.46.194:9000", host: "localhost"
+2018/03/30 09:11:46 [error] 5#5: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://221.179.46.194:9000", host: "localhost"
+2018/03/30 09:11:46 [error] 5#5: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://221.179.46.194:9000", host: "localhost"
+2018/03/30 09:11:46 [error] 5#5: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://221.179.46.194:9000", host: "localhost"
+2018/03/30 09:12:07 [error] 5#5: *11 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /store/list HTTP/1.1", upstream: "fastcgi://221.179.46.194:9000", host: "it-backend-local.com", referrer: "http://it-backend-local.com/"
+2018/03/30 09:22:25 [error] 5#5: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://221.179.46.194:9000", host: "localhost"
+2018/03/30 09:22:26 [error] 5#5: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://221.179.46.194:9000", host: "localhost"
+2018/03/30 09:28:25 [error] 5#5: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://221.179.46.194:9000", host: "localhost"
+2018/03/30 09:28:26 [error] 5#5: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://221.179.46.194:9000", host: "localhost"
+2018/03/30 09:34:46 [error] 5#5: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET / HTTP/1.1", upstream: "fastcgi://221.179.46.194:9000", host: "localhost"
+2018/03/30 09:38:54 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/default.conf:37
+2018/03/30 09:39:11 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/default.conf:37
+2018/03/30 09:40:22 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/default.conf:37
+2018/03/30 09:41:31 [emerg] 1#1: host not found in upstream "php" in /etc/nginx/conf.d/default.conf:37
+2018/03/30 09:49:02 [error] 5#5: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/OLE/PPS/Root.php on line 279. in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php:366
 Stack trace:
-#0 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('request', true)
-#1 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Application.php(160): yii\base\Module->get('request')
-#2 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Component.php(139): yii\web\Application->getRequest()
-#3 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/di/ServiceLocator.php(77): yii\base\Component->__get('request')
-#4 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/ErrorHandler.php(499): yii\di\ServiceLocator->__get('request')
-#5 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/ErrorHandler.php(115): yii\web\ErrorHandler->shouldRenderSimpleHtml()
-#6 /var/www/html/WechatCRM/it-middleware/v" while reading upstream, client: 172.21.0.1, server: it-mw-local.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-mw-local.com"
-2018/03/27 09:03:04 [error] 5#5: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
-yii\base\InvalidConfigException: Unknown component ID: request in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/di/ServiceLocator.php:139
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExce" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /report/export?data=0&range=2017-08-01%20-%202017-08-31 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com", referrer: "http://it-backend-local.com/report/select-date?type=4&data=undefined"
+2018/03/30 10:38:18 [error] 5#5: *105 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/OLE/PPS/Root.php on line 279. in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php:366
 Stack trace:
-#0 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('request', true)
-#1 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Application.php(160): yii\base\Module->get('request')
-#2 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Component.php(139): yii\web\Application->getRequest()
-#3 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/di/ServiceLocator.php(77): yii\base\Component->__get('request')
-#4 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/ErrorHandler.php(499): yii\di\ServiceLocator->__get('request')
-#5 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/ErrorHandler.php(115): yii\web\ErrorHandler->shouldRenderSimpleHtml()
-#6 /var/www/html/WechatCRM/it-middleware/v" while reading upstream, client: 172.21.0.1, server: it-mw-local.com, request: "GET /site/error HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-mw-local.com"
-2018/03/27 09:12:47 [error] 6#6: *22 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExce" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /report/export?data=0&range=2017-08-01%20-%202017-08-31 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com"
+2018/04/02 02:52:23 [error] 5#5: *7 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/OLE/PPS/Root.php on line 279. in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExce" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /report/export?data=0&range=2017-08-01%20-%202017-08-31 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com"
+2018/04/02 06:47:34 [error] 5#5: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
 yii\base\InvalidRouteException: Unable to resolve the request: site/error in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
 Stack trace:
 #0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
@@ -27,22 +55,127 @@ Stack trace:
 #3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
 #4 {main}
 Previous exception:
-yii\base\InvalidRouteException: Unable to resolve the request: site/ in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
+yii\base\InvalidRouteException: Unable to resolve the request "send-message/exp-point". in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Module.php:537
 Stack trace:
-#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/y" while reading upstream, client: 172.21.0.1, server: it-wechat-local.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-wechat-local.com"
-2018/03/27 09:12:48 [error] 6#6: *22 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
-yii\base\InvalidRouteException: Unable to resolve the request: site/error in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
+#0 /var/www/html/WechatCRM/it-application/v" while reading upstream, client: 172.21.0.1, server: it-wechat-local.com, request: "GET /send-message/exp-point HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-wechat-local.com"
+2018/04/23 02:40:42 [error] 5#5: *193 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/common/config/swoole-jobs.php on line 13. in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/common/config/swoole-jobs.php on line 13. in /var/www/html/WechatCRM/it-applica" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "POST /discount/rel HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com", referrer: "http://it-backend-local.com/discount/rank-list"
+2018/04/23 02:42:47 [error] 5#5: *195 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/common/config/swoole-jobs.php on line 13. in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/common/config/swoole-jobs.php on line 13. in /var/www/html/WechatCRM/it-applica" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "POST /discount/rel HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com", referrer: "http://it-backend-local.com/discount/rank-list"
+2018/04/23 06:46:10 [error] 5#5: *217 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/OLE/PPS/Root.php on line 283. in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExce" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /vips/export? HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com", referrer: "http://it-backend-local.com/vips/all"
+2018/04/23 06:48:01 [error] 5#5: *227 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/OLE/PPS/Root.php on line 283. in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExce" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /vips/export? HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com", referrer: "http://it-backend-local.com/vips/all"
+2018/04/23 06:48:22 [error] 5#5: *236 FastCGI sent in stderr: "PHP mess" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /report/scanexport?data=0&type=0&range=2018-04-06%20-%202018-04-07 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com", referrer: "http://it-backend-local.com/report/select-date?type=3&n_type=0&data=undefined"
+2018/04/23 06:48:22 [error] 5#5: *236 FastCGI sent in stderr: "age: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/OLE/PPS/Root.php on line 279. in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExce" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /report/scanexport?data=0&type=0&range=2018-04-06%20-%202018-04-07 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com", referrer: "http://it-backend-local.com/report/select-date?type=3&n_type=0&data=undefined"
+2018/04/23 06:48:33 [error] 5#5: *236 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/OLE/PPS/Root.php on line 279. in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /report/export?data=0&range=2018-04-05%20-%202018-04-07 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com", referrer: "http://it-backend-local.com/report/select-date?type=4&data=undefined"
+2018/04/23 06:48:33 [error] 5#5: *236 FastCGI sent in stderr: "renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExce" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /report/export?data=0&range=2018-04-05%20-%202018-04-07 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com", referrer: "http://it-backend-local.com/report/select-date?type=4&data=undefined"
+2018/04/23 06:48:46 [error] 5#5: *236 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/OLE/PPS/Root.php on line 279. in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /report/export?data=0&range=2018-05-01%20-%202018-05-03 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com", referrer: "http://it-backend-local.com/report/select-date?type=4&data=undefined"
+2018/04/23 06:48:46 [error] 5#5: *236 FastCGI sent in stderr: "renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExce" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /report/export?data=0&range=2018-05-01%20-%202018-05-03 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com", referrer: "http://it-backend-local.com/report/select-date?type=4&data=undefined"
+2018/04/23 06:49:46 [error] 5#5: *236 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\InvalidRouteException: Unable to resolve the request: admin/error in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
 Stack trace:
 #0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
-#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('admin/error')
 #2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
 #3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
 #4 {main}
 Previous exception:
-yii\base\InvalidRouteException: Unable to resolve the request: site/ in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
+yii\base\InvalidRouteException: Unable to resolve the request: report/newexport in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
 Stack trace:
-#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/y" while reading upstream, client: 172.21.0.1, server: it-wechat-local.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-wechat-local.com"
-2018/03/28 03:09:30 [error] 5#5: *5 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+#0 /var/www/html/WechatCRM/it-application/ven" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /report/newexport?data=0&range=2018-05-01%20-%202018-05-03 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com"
+2018/04/23 06:51:24 [error] 5#5: *249 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/OLE/PPS/Root.php on line 283. in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExce" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /vips/export? HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com"
+2018/04/23 06:51:53 [error] 5#5: *249 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/backend/service/Export.php on line 369. in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/backend/service/Export.php on line 369. in /var/www/html/WechatCRM/it-application" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /vips/export? HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com"
+2018/04/23 06:54:08 [error] 5#5: *249 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/OLE/PPS/Root.php on line 283. in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-application/vendor/phpoffice/phpexcel/Classes/PHPExce" while reading upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /vips/export? HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com"
+2018/04/23 07:01:45 [error] 5#5: *281 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 172.21.0.1, server: it-backend-local.com, request: "GET /vips/export? HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-backend-local.com"
+2018/04/23 09:37:59 [emerg] 1#1: invalid parameter "81" in /etc/nginx/conf.d/it-mw.conf:4
+2018/04/23 09:40:41 [error] 5#5: *5 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
 yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-middleware/api/controllers/SiteController.php on line 25. in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Response.php:366
 Stack trace:
 #0 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
@@ -51,65 +184,6 @@ Stack trace:
 #3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
 #4 {main}
 Previous exception:
-yii\base\InvalidRouteException: Unable to resolve the request: user/find in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Controller.php:128
+yii\base\InvalidRouteException: Unable to resolve the request "user/restore/user/restore". in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Module.php:537
 Stack trace:
-#0 /var/www/html/Wec" while reading upstream, client: 172.21.0.1, server: it-mw-local.com, request: "GET /user/find?phone=18820035407&type=1&token=1 HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-mw-local.com"
-2018/03/28 03:10:07 [error] 5#5: *5 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
-yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-middleware/api/controllers/SiteController.php on line 25. in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Response.php:366
-Stack trace:
-#0 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
-#1 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
-#2 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
-#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
-#4 {main}
-Previous exception:
-yii\base\InvalidRouteException: Unable to resolve the request: user/find in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Controller.php:128
-Stack trace:
-#0 /var/www/html/Wec" while reading upstream, client: 172.21.0.1, server: it-mw-local.com, request: "GET /user/find?phone=18820035407&type=BIT&token=1 HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-mw-local.com"
-2018/03/28 03:10:24 [error] 5#5: *5 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
-yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/WechatCRM/it-middleware/api/controllers/SiteController.php on line 25. in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Response.php:366
-Stack trace:
-#0 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
-#1 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
-#2 /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
-#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
-#4 {main}
-Previous exception:
-yii\base\InvalidRouteException: Unable to resolve the request: user/find in /var/www/html/WechatCRM/it-middleware/vendor/yiisoft/yii2/base/Controller.php:128
-Stack trace:
-#0 /var/www/html/Wec" while reading upstream, client: 172.21.0.1, server: it-mw-local.com, request: "GET /user/find?phone=18820035407&type=BIT&token=1 HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-mw-local.com"
-2018/03/28 03:11:38 [error] 5#5: *5 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.21.0.1, server: it-mw-local.com, request: "GET /user/phone?phone=18820035407&type=BIT&token=1 HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-mw-local.com"
-2018/03/28 03:13:54 [error] 5#5: *14 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.21.0.1, server: it-mw-local.com, request: "GET /user/phone?phone=18820035407&type=BIT&token=1 HTTP/1.1", upstream: "fastcgi://172.21.0.4:9000", host: "it-mw-local.com"
-2018/03/28 03:53:50 [error] 6#6: *26 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
-yii\base\InvalidRouteException: Unable to resolve the request: site/error in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
-Stack trace:
-#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
-#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
-#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(Picqer\Barcode\Exceptions\BarcodeException))
-#3 [internal function]: yii\base\ErrorHandler->handleException(Object(Picqer\Barcode\Exceptions\BarcodeException))
-#4 {main}
-Previous exception:
-Picqer\Barcode\Exceptions\BarcodeException: Neither gd-lib or imagick are installed! in /var/www/html/WechatCRM/it-application/vendor/picqer/php-barcode-generator/src/BarcodeGeneratorPNG.php:44
-Stack" while reading upstream, client: 172.21.0.1, server: it-wechat-local.com, request: "GET /index/index?brand_id=1 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-wechat-local.com"
-2018/03/28 03:53:53 [error] 6#6: *26 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
-yii\base\InvalidRouteException: Unable to resolve the request: site/error in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
-Stack trace:
-#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
-#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
-#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(Picqer\Barcode\Exceptions\BarcodeException))
-#3 [internal function]: yii\base\ErrorHandler->handleException(Object(Picqer\Barcode\Exceptions\BarcodeException))
-#4 {main}
-Previous exception:
-Picqer\Barcode\Exceptions\BarcodeException: Neither gd-lib or imagick are installed! in /var/www/html/WechatCRM/it-application/vendor/picqer/php-barcode-generator/src/BarcodeGeneratorPNG.php:44
-Stack" while reading upstream, client: 172.21.0.1, server: it-wechat-local.com, request: "GET /index/index?brand_id=1 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-wechat-local.com"
-2018/03/28 03:54:09 [error] 6#6: *26 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
-yii\base\InvalidRouteException: Unable to resolve the request: site/error in /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Controller.php:128
-Stack trace:
-#0 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
-#1 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('site/error')
-#2 /var/www/html/WechatCRM/it-application/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(Picqer\Barcode\Exceptions\BarcodeException))
-#3 [internal function]: yii\base\ErrorHandler->handleException(Object(Picqer\Barcode\Exceptions\BarcodeException))
-#4 {main}
-Previous exception:
-Picqer\Barcode\Exceptions\BarcodeException: Neither gd-lib or imagick are installed! in /var/www/html/WechatCRM/it-application/vendor/picqer/php-barcode-generator/src/BarcodeGeneratorPNG.php:44
-Stack" while reading upstream, client: 172.21.0.1, server: it-wechat-local.com, request: "GET /index/index?brand_id=1 HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "it-wechat-local.com"
+#0 /va" while reading upstream, client: 172.21.0.5, server: it-mw-local.com, request: "POST /user/restore/user/restore HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "nginx:81"
