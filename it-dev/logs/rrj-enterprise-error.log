@@ -1,1 +1,0 @@
-2018/04/09 02:33:22 [error] 5#5: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.21.0.1, server: rrj-enterprise.com, request: "GET /index/login/logout HTTP/1.1", upstream: "fastcgi://172.21.0.5:9000", host: "rrj-enterprise.com"
