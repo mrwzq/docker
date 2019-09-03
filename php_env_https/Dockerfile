@@ -26,13 +26,6 @@ RUN yum install -y \
         php73-php-pecl-zip \
         supervisor
 
-ADD config/supervisor.conf /etc/supervisor.conf
-ADD supervisord.d /etc/supervisord.d
-ADD config/nginx.conf /etc/nginx/nginx.conf
-RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-
-CMD  ["/usr/bin/supervisord", "-c", "/etc/supervisor.conf"] 
-
 
 
 
