@@ -6,7 +6,7 @@ ADD nginx.repo /etc/yum.repos.d/nginx.repo
 RUN yum-config-manager --enable nginx-mainline
 # 安装remi库
 RUN yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm yum-utils
-
+RUN yum-config-manager --enable remi-php73
 RUN yum install -y \
         nginx\
         php73-php-fpm \
@@ -25,7 +25,7 @@ RUN yum install -y \
         php73-php-xml \
         php73-php-pecl-zip \
         supervisor
-
+RUN yum update php\*
 ADD config/supervisor.conf /etc/supervisor.conf
 ADD supervisord.d /etc/supervisord.d
 ADD config/nginx.conf /etc/nginx/nginx.conf
