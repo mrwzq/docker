@@ -24,6 +24,7 @@ RUN yum install -y \
         php73-php-pecl-swoole4 \
         php73-php-xml \
         php73-php-pecl-zip \
+        php73-php-pecl-redis \
         supervisor
 RUN yum update php\*
 ADD config/supervisor.conf /etc/supervisor.conf
